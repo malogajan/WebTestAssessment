@@ -39,6 +39,7 @@ public class TC03_MandatoryFields {
         String Password = driver.findElement(By.xpath("/html/body/div[4]/div[1]/div[4]/div[2]/form/div/div[2]/div[3]/div[2]/div[1]/span[2]/span")).getText();
         String CPassword = driver.findElement(By.xpath("/html/body/div[4]/div[1]/div[4]/div[2]/form/div/div[2]/div[3]/div[2]/div[2]/span[2]/span")).getText();
 
+        // Declare the message title
         String expectedEmails = "Email is required.";
         String expectedFirstNameMSG = "First name is required.";
         String expectedLastNameMSG = "Last name is required.";
@@ -86,7 +87,7 @@ public class TC03_MandatoryFields {
         //wait 10 sec
         Thread.sleep(3000);
         driver.manage().deleteAllCookies();
-        //close browser
+        //close browser/ Application
         driver.close();
     }
 }
