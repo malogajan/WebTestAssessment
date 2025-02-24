@@ -1,11 +1,16 @@
+package WebAssessment;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 public class TC01_UserRegistrationandLogin {
     public static void main(String[] args) throws InterruptedException {
+        Random random = new Random();
+        int boundedInt = random.nextInt(1000);
 
    //Browser driver exe
  System.setProperty("webdriver.gecko.driver","C:\\Users\\jan.seopa\\Downloads\\geckodriver-v0.35.0-win64\\geckodriver.exe");
@@ -24,8 +29,8 @@ public class TC01_UserRegistrationandLogin {
   //Select Title
         driver.findElement(By.xpath("//*[@id=\"gender-male\"]")).click();
         driver.findElement(By.xpath("//*[@id=\"FirstName\"]")).sendKeys("Jan");
-        driver.findElement(By.xpath("//*[@id=\"LastName\"]")).sendKeys("Seopa");
-        driver.findElement(By.xpath("//*[@id=\"Email\"]")).sendKeys("malogaja53b@gmail.com");
+        driver.findElement(By.xpath("//*[@id=\"LastName\"]")).sendKeys(new CharSequence[]{"Seopa" + boundedInt });
+        driver.findElement(By.xpath("//*[@id=\"Email\"]")).sendKeys(new CharSequence[]{boundedInt+ "malogajan@gmail.com" });
 
         //Enter Password
         driver.findElement(By.xpath("//*[@id=\"Password\"]")).sendKeys("PKR@PKR");
@@ -44,10 +49,10 @@ public class TC01_UserRegistrationandLogin {
 //
   //Click on Register Button
 //        driver.findElement(By.xpath("//*[@id=\"submitAccount\"]")).click();
-        String userText=driver.findElement(By.xpath("//*[@id=\"header\"]/html/body/div[4]/div[1]/div[4]/div[2]/div/div[2]/div[1]\n")).getText();
+        String userText=driver.findElement(By.xpath("/html/body/div[4]/div[1]/div[4]/div[2]/div/div[2]/div[1]\n")).getText();
 
         //Validate that user has created
-        if(userText.contains("userText")) {
+        if(userText.contains("Your Registration Completed")) {
             System.out.println("User Verified,Test case Passed");
         }
         else {

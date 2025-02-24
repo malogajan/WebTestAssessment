@@ -5,13 +5,13 @@
   <suite started-at="2024-10-17T15:33:43 SAST" name="All Test Suite" finished-at="2024-10-17T15:33:43 SAST" duration-ms="170">
     <groups>
     </groups>
-    <test started-at="2024-10-17T15:33:43 SAST" name="SeleniumBasics" finished-at="2024-10-17T15:33:43 SAST" duration-ms="170">
+    <test started-at="2024-10-17T15:33:43 SAST" name="WebAssessment" finished-at="2024-10-17T15:33:43 SAST" duration-ms="170">
       <class name="ExtentReport">
         <test-method is-config="true" signature="startReporter()[pri:0, instance:ExtentReport@34f6515b]" started-at="2024-10-17T15:33:43 SAST" name="startReporter" finished-at="2024-10-17T15:33:43 SAST" duration-ms="161" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startReporter -->
       </class> <!-- ExtentReport -->
-    </test> <!-- SeleniumBasics -->
+    </test> <!-- WebAssessment -->
   </suite> <!-- All Test Suite -->
 </testng-results>

@@ -1,15 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="All Test Suite">
-        <test name="SeleniumBasics">
-<classes>
-    <class name="ExtentReport" />
-    <class name="TC01_UserRegistrationandLogin" />
-    <class name="TC02_NegativeScenario" />
-    <class name="TC03_MandatoryFields" />
-    <class name="TC04_IncorrectPassword" />
-    <class name="TC05_SearchProduct" />
-    <class name="TC06_BuyProduct" />
-</classes>
-</test>
+<suite name="Wep Application">
+    <test name="Regression Testing">
+        <classes>
+            <class name="Name of the Class"/>
+        </classes>
+    </test> <!-- Test -->
 </suite> <!-- Suite -->
