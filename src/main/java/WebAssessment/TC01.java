@@ -38,17 +38,6 @@ public class TC01 {
 
         //Click on Register Button
         driver.findElement(By.xpath("//*[@id=\"register-button\"]")).click();
-
-//  //Select Date of Birth
-//        WebElement DOB=driver.findElement(By.xpath("//*[@id=\"days\"]"));
-//        Select oSelect=new Select(DOB);
-//        oSelect.selectByValue("4");
-
-//        driver.findElement(By.xpath("//*[@id=\"months\"]")).sendKeys("June");
-//       driver.findElement(By.xpath("//*[@id=\"years\"]")).sendKeys("1992");
-//
-        //Click on Register Button
-//        driver.findElement(By.xpath("//*[@id=\"submitAccount\"]")).click();
         String userText=driver.findElement(By.xpath("/html/body/div[4]/div[1]/div[4]/div[2]/div/div[2]/div[1]\n")).getText();
 
         //Validate that user has created
