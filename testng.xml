@@ -3,7 +3,7 @@
 <suite name="Wep Application">
     <test name="Regression Testing">
         <classes>
-            <class name="Name of the Class"/>
+            <class name="Name of the Classes"/>
         </classes>
     </test> <!-- Test -->
 </suite> <!-- Suite -->

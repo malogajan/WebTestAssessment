@@ -7,26 +7,26 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
-public class TC01_UserRegistrationandLogin {
+public class TC01 {
     public static void main(String[] args) throws InterruptedException {
         Random random = new Random();
         int boundedInt = random.nextInt(1000);
 
-   //Browser driver exe
- System.setProperty("webdriver.gecko.driver","C:\\Users\\jan.seopa\\Downloads\\geckodriver-v0.35.0-win64\\geckodriver.exe");
+        //Browser driver exe
+        System.setProperty("webdriver.gecko.driver","C:\\Users\\jan.seopa\\Downloads\\geckodriver-v0.35.0-win64\\geckodriver.exe");
 
- //Create chrome instance
-  WebDriver driver = new FirefoxDriver();
+        //Create chrome instance
+        WebDriver driver = new FirefoxDriver();
 
-  //open application
+        //open application
         driver.get("https://demowebshop.tricentis.com/");
         driver.manage().timeouts().implicitlyWait(3000, TimeUnit.MILLISECONDS);
-  //Maximize browser
-  driver.manage().window().maximize();
-  //Click on Sign in
-     driver.findElement(By.linkText("Register")).click();
+        //Maximize browser
+        driver.manage().window().maximize();
+        //Click on Sign in
+        driver.findElement(By.linkText("Register")).click();
 
-  //Select Title
+        //Select Title
         driver.findElement(By.xpath("//*[@id=\"gender-male\"]")).click();
         driver.findElement(By.xpath("//*[@id=\"FirstName\"]")).sendKeys("Jan");
         driver.findElement(By.xpath("//*[@id=\"LastName\"]")).sendKeys(new CharSequence[]{"Seopa" + boundedInt });
@@ -47,7 +47,7 @@ public class TC01_UserRegistrationandLogin {
 //        driver.findElement(By.xpath("//*[@id=\"months\"]")).sendKeys("June");
 //       driver.findElement(By.xpath("//*[@id=\"years\"]")).sendKeys("1992");
 //
-  //Click on Register Button
+        //Click on Register Button
 //        driver.findElement(By.xpath("//*[@id=\"submitAccount\"]")).click();
         String userText=driver.findElement(By.xpath("/html/body/div[4]/div[1]/div[4]/div[2]/div/div[2]/div[1]\n")).getText();
 
@@ -67,11 +67,12 @@ public class TC01_UserRegistrationandLogin {
 //        else {
 //            System.out.println("Please provide different email to register or continue to login");
 //        }
-  //wait 10 sec
-  Thread.sleep(3000);
-  driver.manage().deleteAllCookies();
-  //close browser
+        //wait 10 sec
+        Thread.sleep(3000);
+        driver.manage().deleteAllCookies();
+        //close browser
         driver.close();
     }
 }
+
 
